@@ -1,0 +1,17 @@
+[ 
+   {
+        "name": "dark",
+        "info-tr": "",
+        "info-en": ""
+    },
+    {
+        "name": "Harun",
+        "info-tr": "Harun bir öğrencidir.",
+        "info-en": "Harun is a student"
+    },
+    {
+        "name": "Telefon",
+        "info-tr": "Telefon",
+        "info-en": "A phone"
+    }
+]
