@@ -47,7 +47,7 @@
                     "Teknofest Educational Technologies Competition" 
                 }}
      </div>
-     <div>Made with 🖤 open source on <a href="https://github.com/orhanemree/argumareot-turizm">GitHub</a>.</div>
+     <div>Made with 🖤 open source on <a >GitHub</a>.</div>
     </footer>
     </div>
 </template>
@@ -91,7 +91,7 @@ export default {
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js");
         }
-        const MODEL_URL = "https://teachablemachine.withgoogle.com/models/RlR25vRbP/model.json";
+        const MODEL_URL = "https://storage.googleapis.com/tm-model/_gO2STbel/model.json";
         let classifier, videoInput, outputWidth, outputHeight;
         // video classify with ml5.js
         const classifyVideo = () => {
@@ -127,66 +127,7 @@ export default {
                 p.image(videoInput, 0, 0, outputWidth, outputHeight);
             }
         }
-        new p5(script);<><div>Teachable Machine Image Model - p5.js and ml5.js</div><script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script><script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.dom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script><script type="text/javascript">
-  // Classifier Variable
-            let classifier;
-            // Model URL
-            let imageModelURL = 'https://teachablemachine.withgoogle.com/models/_gO2STbel/';
-
-            // Video
-            let video;
-            let flippedVideo;
-            // To store the classification
-            let label = "";
-
-            // Load the model first
-            function preload() {classifier = ml5.imageClassifier(imageModelURL + 'model.json')};
-            }
-
-            function setup() {createCanvas(320, 260)};
-            // Create the video
-            video = createCapture(VIDEO);
-            video.size(320, 240);
-            video.hide();
-
-            flippedVideo = ml5.flipImage(video);
-            // Start classifying
-            classifyVideo();
-            }
-
-            function draw() {background(0)};
-            // Draw the video
-            image(flippedVideo, 0, 0);
-
-            // Draw the label
-            fill(255);
-            textSize(16);
-            textAlign(CENTER);
-            text(label, width / 2, height - 4);
-            }
-
-            // Get a prediction for the current video frame
-            function classifyVideo() {flippedVideo = ml5.flipImage(video)}
-            classifier.classify(flippedVideo, gotResult);
-            flippedVideo.remove();
-
-            }
-
-            // When we get a result
-            function gotResult(error, results) {
-                // If there is an error
-            }
-    // If there is an error
-            if (error) {console.error(error)};
-            return;
-            }
-            // The results are in an array ordered by confidence.
-            // console.log(results[0]);
-            label = results[0].label;
-            // Classifiy again!
-            classifyVideo();
-            }
-        </script><div>Teachable Machine Image Model - p5.js and ml5.js</div><script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script><script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.dom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script><script type="text/javascript">
+        new p5(script);
   // Classifier Variable
                 let classifier;
                 // Model URL
